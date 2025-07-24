@@ -1,0 +1,109 @@
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: #e0f7fa;
+  margin: 0;
+  padding: 0;
+}
+
+.chat-container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+h1 {
+  text-align: center;
+  color: #4aa3df;
+}
+
+.messages {
+  height: 300px;
+  overflow-y: auto;
+  border: 1px solid #b2ebf2;
+  border-radius: 10px;
+  padding: 10px;
+  background: #f1fafe;
+  margin-bottom: 10px;
+}
+
+.message {
+  margin: 8px 0;
+  padding: 8px;
+  border-radius: 10px;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+.message.user {
+  background-color: #d0f0fd;
+  align-self: flex-end;
+  text-align: right;
+}
+
+.message.assistant {
+  background-color: #fce4ec;
+  align-self: flex-start;
+  text-align: left;
+}
+
+.input-area {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 2px solid #81d4fa;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #81d4fa;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #4fc3f7;
+}
+
+/* Typing indicator animation */
+.typing-indicator {
+  font-style: italic;
+  color: #999;
+  margin-top: 5px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.typing-indicator .dots span {
+  animation: blink 1.2s infinite;
+}
+
+.typing-indicator .dots span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.typing-indicator .dots span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes blink {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
