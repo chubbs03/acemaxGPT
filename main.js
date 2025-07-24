@@ -10,6 +10,11 @@ createApp({
 ],
       isTyping: false
     };
+    },
+  computed: {
+    visibleMessages() {
+      return this.messages.filter(msg => msg.role !== 'system');
+    }
   },
   methods: {
     async sendMessage() {

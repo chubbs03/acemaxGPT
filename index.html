@@ -13,11 +13,10 @@
       <h1>💬 acemaxGPT</h1>
 
       <div class="messages">
-        <div v-for="(msg, index) in messages" :key="index" :class="['message', msg.role]">
+        <div v-for="(msg, index) in visibleMessages" :key="index" :class="['message', msg.role]">
           <span>{{ msg.role === 'user' ? '💫 You:' : '🧚🏻‍♀️ AcemaxGPT:' }}</span>
           {{ msg.content }}
         </div>
-        <!-- Typing indicator with animated dots -->
         <div class="typing-indicator" v-if="isTyping">
           🧚🏻‍♀️ AcemaxGPT is typing<span class="dots"><span>.</span><span>.</span><span>.</span></span>
         </div>
